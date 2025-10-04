@@ -24,7 +24,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
 
 <section id="content-2-section" style="padding: 2em 0;">
   <div id="current-time" style="text-align: center; margin-bottom: 1em; font-size: 0.9em; color: #57606a;"></div>
-  <script src="currentTime.js"></script>
+  <script src="timeSync.js"></script>
 
   <h2 style="text-align: center; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5em; margin-bottom: 1.5em;">스타트업-데이트</h2>
   <ul style="list-style-type: none; padding: 0; max-width: 600px; margin: 0 auto;">
