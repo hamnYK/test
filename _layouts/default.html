@@ -18,14 +18,14 @@
           fetch("{{ site.baseurl }}/" + mdFile)
             .then(response => response.ok ? response.text() : Promise.reject('파일 로딩 실패: ' + mdFile))
             .then(markdownText => {
-              mainContent.style.display = 'none'; // 기존 콘텐츠 숨기기
-              contentArea.style.display = 'block'; // 동적 콘텐츠 영역 보이기
+              if (mainContent) mainContent.style.display = 'none'; // 기존 콘텐츠 숨기기
+              if (contentArea) contentArea.style.display = 'block'; // 동적 콘텐츠 영역 보이기
               const contentOnly = markdownText.replace(/---[\s\S]*?---/, '').trim();
-              contentArea.innerHTML = marked.parse(contentOnly);
+              if (contentArea) contentArea.innerHTML = marked.parse(contentOnly);
             })
             .catch(error => {
               console.error('콘텐츠 로딩 오류:', error);
-              contentArea.innerHTML = '<p style="text-align: center;">콘텐츠를 불러오는 중 오류가 발생했습니다.</p>';
+              if (contentArea) contentArea.innerHTML = '<p style="text-align: center;">콘텐츠를 불러오는 중 오류가 발생했습니다.</p>';
             });
         }
         
@@ -34,9 +34,8 @@
         if (homeButton) {
             homeButton.addEventListener('click', function(e){
                 e.preventDefault();
-                contentArea.style.display = 'none';
-                mainContent.style.display = 'block';
-                // URL을 기본 경로로 변경 (선택 사항)
+                if (contentArea) contentArea.style.display = 'none';
+                if (mainContent) mainContent.style.display = 'block';
                 history.pushState(null, '', '{{ site.baseurl }}/');
             });
         }
@@ -45,7 +44,7 @@
         const subMenu = document.getElementById('content-1-section');
         if (subMenu) {
             subMenu.addEventListener('click', function(e) {
-              if (e.target.tagName === 'A') {
+              if (e.target.tagName === 'A' && e.target.id) {
                 e.preventDefault();
                 let mdFile = '';
                 if (e.target.id === 'menu-solutionservice') mdFile = 'solutionservice.md';
@@ -56,6 +55,9 @@
               }
             });
         }
+
+        // 페이지 최초 로딩 시 '솔루션·서비스' 콘텐츠를 기본으로 표시
+        loadContent('solutionservice.md');
       });
     </script>
   </body>
