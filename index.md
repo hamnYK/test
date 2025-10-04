@@ -9,7 +9,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
 </header>
 
 <nav style="text-align: center; padding: 1em; background-color: var(--header-bg-color); border-bottom: 1px solid var(--border-color);">
-  <a href="{{ site.baseurl }}/" style="margin: 0 1em; font-weight: 500;">Home</a> |
+  <a id="home-btn" href="{{ site.baseurl }}/" style="margin: 0 1em; font-weight: 500;">Home</a> |
   <a href="IR_페이지_주소" style="margin: 0 1em; font-weight: 500;">IR</a> |
   <a href="Admin_외부링크_주소" target="_blank" style="margin: 0 1em; font-weight: 500;">Admin</a>
 </nav>
@@ -20,8 +20,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
   <a href="#" id="menu-ceoinsight" style="margin: 0 1em;">인사이트</a>
 </section>
 
-<div id="content-area">
-  </div>
+<div id="content-area" style="display: none;"></div>
 
 <div id="main-content">
 
