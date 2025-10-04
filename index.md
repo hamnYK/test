@@ -52,7 +52,6 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
     <address>
         <p>
             이메일: <a href="mailto:worflogy@worflogy.com">worflogy@worflogy.com</a><br>
-            전화: 010-3333-4444<br>
             주소(본점): 경기도 의왕시 안양판교로 82, 8층 807호 (의왕시 스타트업지원센터)<br>
             사업자등록번호: 580-88-03419<br>
             법인등록번호: 131111-0077069<br>
