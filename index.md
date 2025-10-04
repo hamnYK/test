@@ -9,7 +9,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
 </header>
 
 <nav style="text-align: center; padding: 1em; background-color: var(--header-bg-color); border-bottom: 1px solid var(--border-color);">
-  <a id="home-btn" href="{{ site.baseurl }}/" style="margin: 0 1em; font-weight: 500;">Home</a> |
+  <a href="{{ site.baseurl }}/" style="margin: 0 1em; font-weight: 500;">Home</a> |
   <a href="#" style="margin: 0 1em; font-weight: 500;">IR</a> |
   <a href="#" target="_blank" style="margin: 0 1em; font-weight: 500;">Admin</a>
 </nav>
@@ -22,44 +22,40 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
 
 <div id="content-area"></div>
 
-<div id="main-content" style="display: none;">
+<section id="content-2-section">
+  <div id="current-time" style="text-align: center; margin-bottom: 1em; font-size: 0.9em; color: #57606a;"></div>
+  <script src="{{ site.baseurl }}/timeSync.js"></script>
 
-  <section id="content-2-section">
-    <div id="current-time" style="text-align: center; margin-bottom: 1em; font-size: 0.9em; color: #57606a;"></div>
-    <script src="{{ site.baseurl }}/timeSync.js"></script>
+  <h2 style="text-align: center;">스타트업-데이트</h2>
+  <ul style="list-style-type: none; padding: 0; max-width: 600px; margin: 0 auto;">
+    <li style="margin-bottom: 1em;"><strong>2025-10-04</strong>: <a href="https://example.com" target="_blank">주요 파트너십 체결</a></li>
+    <li style="margin-bottom: 1em;"><strong>2025-09-15</strong>: 정부 R&D 과제 선정</li>
+  </ul>
+</section>
 
-    <h2 style="text-align: center;">스타트업-데이트</h2>
-    <ul style="list-style-type: none; padding: 0; max-width: 600px; margin: 0 auto;">
-      <li style="margin-bottom: 1em;"><strong>2025-10-04</strong>: <a href="https://example.com" target="_blank">주요 파트너십 체결</a></li>
-      <li style="margin-bottom: 1em;"><strong>2025-09-15</strong>: 정부 R&D 과제 선정</li>
-    </ul>
-  </section>
-
-  <section id="partners-section">
-    <h2 style="text-align: center; margin-top: 3em;">협력기관</h2>
-    <div class="slider">
-      <div class="slider-track">
-        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo1.png" alt="협력기관 1"></div>
-        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo2.png" alt="협력기관 2"></div>
-        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo1.png" alt="협력기관 1"></div>
-        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo2.png" alt="협력기관 2"></div>
-      </div>
+<section id="partners-section">
+  <h2 style="text-align: center; margin-top: 3em;">협력기관</h2>
+  <div class="slider">
+    <div class="slider-track">
+      <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo1.png" alt="협력기관 1"></div>
+      <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo2.png" alt="협력기관 2"></div>
+      <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo1.png" alt="협력기관 1"></div>
+      <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo2.png" alt="협력기관 2"></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact" style="padding: 2em 0; text-align: center; margin-top: 2em;">
-      <h2>문의</h2>
-      <address style="font-style: normal; line-height: 1.8;">
-          <p>
-              이메일: <a href="mailto:worflogy@worflogy.com">worflogy@worflogy.com</a><br>
-              전화: 010-3333-4444<br>
-              주소(본점): 경기도 의왕시 안양판교로 82, 의왕시 스타트업지원센터 8F 807
-          </p>
-      </address>
-  </section>
+<section id="contact" style="padding: 2em 0; text-align: center; margin-top: 2em;">
+    <h2>문의</h2>
+    <address style="font-style: normal; line-height: 1.8;">
+        <p>
+            이메일: <a href="mailto:worflogy@worflogy.com">worflogy@worflogy.com</a><br>
+            전화: 010-3333-4444<br>
+            주소(본점): 경기도 의왕시 안양판교로 82, 의왕시 스타트업지원센터 8F 807
+        </p>
+    </address>
+</section>
 
-  <footer style="text-align: center; padding: 2em 1em; margin-top: 2em; border-top: 1px solid var(--border-color); font-size: 0.9em; color: #57606a;">
-      <p>&copy; 2025 WORFLOGY Inc. All rights reserved.</p>
-  </footer>
-
-</div>
+<footer style="text-align: center; padding: 2em 1em; margin-top: 2em; border-top: 1px solid var(--border-color); font-size: 0.9em; color: #57606a;">
+    <p>&copy; 2025 WORFLOGY Inc. All rights reserved.</p>
+</footer>

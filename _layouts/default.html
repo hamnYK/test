@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
-  
   {%- include head.html -%}
-
   <body>
     <main>
       {{ content }}
     </main>
-
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const contentArea = document.getElementById('content-area');
-        const mainContent = document.getElementById('main-content');
         const subMenu = document.getElementById('content-1-section');
         const subMenuLinks = subMenu ? subMenu.querySelectorAll('a') : [];
-        const homeButton = document.getElementById('home-btn');
 
         function updateActiveMenu(activeId) {
           subMenuLinks.forEach(link => {
@@ -24,13 +19,10 @@
 
         function loadContent(mdFile) {
           const menuId = 'menu-' + mdFile.replace('.md', '');
-          
           fetch("{{ site.baseurl }}/" + mdFile)
             .then(response => response.ok ? response.text() : Promise.reject('파일 로딩 실패: ' + mdFile))
             .then(markdownText => {
-              if (mainContent) mainContent.style.display = 'none';
               if (contentArea) {
-                contentArea.style.display = 'block';
                 const contentOnly = markdownText.replace(/---[\s\S]*?---/, '').trim();
                 contentArea.innerHTML = marked.parse(contentOnly);
                 updateActiveMenu(menuId);
@@ -38,34 +30,21 @@
             })
             .catch(error => console.error('콘텐츠 로딩 오류:', error));
         }
-        
-        if (homeButton) {
-            homeButton.addEventListener('click', function(e){
-                e.preventDefault();
-                if (contentArea) contentArea.style.display = 'none';
-                if (mainContent) mainContent.style.display = 'block';
-                updateActiveMenu(''); // 모든 메뉴 비활성화
-                history.pushState(null, '', '{{ site.baseurl }}/');
-            });
-        }
 
         if (subMenu) {
             subMenu.addEventListener('click', function(e) {
               const targetLink = e.target.closest('a');
-              if (targetLink && targetLink.id) {
+              if (targetLink && targetLink.id && !targetLink.classList.contains('active-menu')) {
                 e.preventDefault();
-                if (targetLink.classList.contains('active-menu')) return;
-
                 let mdFile = '';
                 if (targetLink.id === 'menu-solutionservice') mdFile = 'solutionservice.md';
                 if (targetLink.id === 'menu-techvision') mdFile = 'techvision.md';
                 if (targetLink.id === 'menu-ceoinsight') mdFile = 'ceoinsight.md';
-                
-                if(mdFile) loadContent(mdFile);
+                if (mdFile) loadContent(mdFile);
               }
             });
         }
-
+        
         // 페이지 최초 로딩 시 '솔루션·서비스' 콘텐츠를 기본으로 표시
         loadContent('solutionservice.md');
       });
