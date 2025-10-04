@@ -34,7 +34,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
 </section>
 
 <section id="partners-section">
-  <h2>협력기관</h2>
+  <h2>연구개발 네트워크</h2>
   <div class="slider">
     <div class="slider-track">
       <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo1.png" alt="협력기관 1"></div>
@@ -48,7 +48,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
 </section>
 
 <section id="contact">
-    <h2>문의</h2>
+    <h2>회사 정보</h2>
     <address>
         <p>
             이메일: <a href="mailto:worflogy@worflogy.com">worflogy@worflogy.com</a><br>
