@@ -1,0 +1,138 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  
+  <style>
+    /* Pretendard 폰트 불러오기 */
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+    /* 색상 변수 (GitHub Light Default 컨셉) */
+    :root {
+      --bg-color: #F6F8FA;
+      --text-color: #24292E;
+      --accent-color: #0969DA;
+      --border-color: #D0D7DE;
+      --card-bg-color: #FFFFFF;
+    }
+
+    /* 기본 스타일 */
+    body {
+        font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+    }
+
+    /* Markdown 콘텐츠를 감싸는 컨테이너 스타일 */
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2em;
+        background-color: var(--card-bg-color);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        box-shadow: 0 1px 2px rgba(27, 31, 35, 0.075);
+    }
+    .container h1, .container h2, .container h3 {
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid var(--border-color);
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+    }
+    .container p {
+        line-height: 1.7;
+        margin-bottom: 1em;
+    }
+    .container a {
+        color: var(--accent-color);
+        text-decoration: none;
+    }
+    .container a:hover {
+        text-decoration: underline;
+    }
+    .container ul, .container ol {
+        padding-left: 2em;
+        margin-bottom: 1em;
+    }
+    .container blockquote {
+        padding: 0 1em;
+        color: #6a737d;
+        border-left: 0.25em solid var(--border-color);
+        margin: 2em 0;
+    }
+    
+    /* 이미지 스타일 */
+    .container img {
+      max-width: 90%;
+      height: auto;
+      display: block;
+      margin: 1.5em auto;
+      border-radius: 6px;
+    }
+
+    /* 테이블 스타일 */
+    .container table {
+      width: 100%;
+      margin-bottom: 1em;
+      border-spacing: 0;
+      border-collapse: collapse; 
+    }
+    .container th,
+    .container td {
+      padding: 0.75em;
+      border: 1px solid var(--border-color) !important; 
+    }
+    .container th {
+      font-weight: 600;
+      background-color: var(--bg-color);
+    }
+    
+    /* ======== ▼ 로고 슬라이더 스타일 ▼ ======== */
+    .slider {
+        width: 100%;
+        overflow: hidden;
+        padding: 2em 0;
+        background-color: var(--card-bg-color);
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        margin-top: 2em; /* 슬라이더 위 여백 추가 */
+    }
+    .slider-track {
+        display: flex;
+        /* 로고 개수에 맞춰 너비 조정 필요 (예: 5개 x 2세트 = 10개) */
+        width: calc(200px * 10); 
+        animation: slide 30s linear infinite;
+    }
+    .slide-item {
+        width: 200px;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slide-item img {
+        max-height: 50px;
+        width: auto;
+        filter: grayscale(100%);
+        opacity: 0.6;
+        transition: all 0.3s ease;
+    }
+    .slide-item:hover img {
+        filter: grayscale(0%);
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    @keyframes slide {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+    }
+    .slider-track:hover {
+        animation-play-state: paused;
+    }
+    /* ======== ▲ 로고 슬라이더 스타일 ▲ ======== */
+
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
