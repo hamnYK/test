@@ -6,7 +6,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
 <header>
   <img src="{{ site.baseurl }}/assets/images/worflogy_logo.svg" alt="워플로지 로고" style="max-height: 60px; margin-bottom: 1.5em;">
   <h1>주식회사 워플로지 (WORFLOGY Inc.)</h1>
-  <p>리스크 관리 (소통) {지능형 워크플로 온톨로지 솔루션;}</p>
+  <p>리스크 관리 (소통) {AI 솔루션 (시맨틱 워크플로 디자인);}</p>
 </header>
 
 <nav>
