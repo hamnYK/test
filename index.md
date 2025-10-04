@@ -5,7 +5,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
 
 <header>
   <h1>주식회사 워플로지 (WORFLOGY Inc.)</h1>
-  <p>문제 해결을 위한 온톨로지와 AI 융합 솔루션 기술 기업</p>
+  <p>리스크를 관리하는 지능형 시맨틱 워크플로 디자인 솔루션 연구개발</p>
 </header>
 
 <nav>
