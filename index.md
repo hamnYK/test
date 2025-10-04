@@ -12,10 +12,10 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
 <nav style="text-align: center; padding: 1.2em; background-color: var(--header-bg-color); border-bottom: 1px solid var(--border-color);">
   <a href="{{ site.baseurl }}/" style="margin: 0 1.5em; font-weight: 500; font-size: 1.1em;">Home</a> |
   <a href="#" style="margin: 0 1.5em; font-weight: 500; font-size: 1.1em;">IR</a> |
-  <a href="#" target="_blank" style="margin: 0 1.5em; font-weight: 500; font-size: 1.1em;">Admin</a>
+  <a href="#" target="_blank" style="margin: 0 1.5em; font-weight: 500; font-size: 1.1em;">Admin.</a>
 </nav>
 
-<section id="content-1-section" style="padding: 2em 0; text-align: center; background-color: var(--header-bg-color); border-bottom: 1px solid var(--border-color);">
+<section id="content-section" style="padding: 2em 0; text-align: center; background-color: var(--header-bg-color); border-bottom: 1px solid var(--border-color);">
   <a href="#" id="menu-solutionservice" style="margin: 0 1.5em; font-weight: 500; font-size: 1.1em;">솔루션·서비스</a> |
   <a href="#" id="menu-techvision" style="margin: 0 1.5em; font-weight: 500; font-size: 1.1em;">기술·비전</a> |
   <a href="#" id="menu-ceoinsight" style="margin: 0 1.5em; font-weight: 500; font-size: 1.1em;">인사이트</a>
@@ -23,7 +23,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
 
 <div id="content-area" style="padding-top: 1.5em;"></div>
 
-<section id="content-2-section">
+<section id="notion-section">
   <div id="current-time" style="text-align: center; margin-bottom: 2em; font-size: 1em; color: var(--text-muted-color);"></div>
   <script src="{{ site.baseurl }}/timeSync.js"></script>
 
@@ -40,8 +40,10 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
     <div class="slider-track">
       <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo1.png" alt="협력기관 1"></div>
       <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo2.png" alt="협력기관 2"></div>
+      <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo3.png" alt="협력기관 3"></div>
       <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo1.png" alt="협력기관 1"></div>
       <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo2.png" alt="협력기관 2"></div>
+      <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo3.png" alt="협력기관 3"></div>
     </div>
   </div>
 </section>
@@ -52,7 +54,10 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
         <p>
             이메일: <a href="mailto:worflogy@worflogy.com">worflogy@worflogy.com</a><br>
             전화: 010-3333-4444<br>
-            주소(본점): 경기도 의왕시 안양판교로 82, 의왕시 스타트업지원센터 8F 807
+            주소(본점): 경기도 의왕시 안양판교로 82, 8층 807호 (의왕시 스타트업지원센터)<br>
+            사업자등록번호: 580-88-03419
+            법인등록번호: 131111-0077069
+            대표: 함영국 (Hamn, YoungKuk)
         </p>
     </address>
 </section>

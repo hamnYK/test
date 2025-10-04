@@ -27,7 +27,6 @@
         line-height: 1.7;
     }
     
-    /* ======== ▼ 전체 레이아웃 컨테이너 (수정됨) ▼ ======== */
     main {
         max-width: 900px;
         margin: 0 auto;
@@ -35,9 +34,7 @@
         background-color: var(--card-bg-color);
         border: 1px solid var(--border-color);
         border-radius: 8px;
-        /* box-shadow: 0 4px 12px rgba(27, 31, 35, 0.08);  <- 이 줄이 제거되었습니다 */
     }
-    /* ======== ▲ 전체 레이아웃 컨테이너 (수정됨) ▲ ======== */
 
     h1, h2, h3 {
         padding-bottom: 0.4em;
@@ -63,23 +60,23 @@
     nav a { margin: 0 1.5em; font-weight: 500; font-size: 1.1em; }
 
     /* 동적 콘텐츠 메뉴 */
-    #content-1-section {
+    #content-section {
         padding: 2em 0;
         text-align: center;
         background-color: transparent;
         border-bottom: 1px solid var(--border-color);
     }
-    #content-1-section a { margin: 0 1.5em; font-weight: 500; font-size: 1.1em; }
-    #content-1-section a.active-menu {
+    #content-section a { margin: 0 1.5em; font-weight: 500; font-size: 1.1em; }
+    #content-section a.active-menu {
       color: var(--text-color); cursor: default; font-weight: 700;
     }
-    #content-1-section a.active-menu:hover { text-decoration: none; }
+    #content-section a.active-menu:hover { text-decoration: none; }
     #content-area { padding-top: 1.5em; }
     
     /* 스타트업-데이트 */
-    #content-2-section h2, #partners-section h2, #contact h2 { text-align: center; }
-    #content-2-section ul { list-style-type: none; padding: 0; max-width: 700px; margin: 0 auto; }
-    #content-2-section li { margin-bottom: 1.2em; padding: 1.2em; border: 1px solid var(--border-color); border-radius: 8px; background-color: var(--header-bg-color); }
+    #notion-section h2, #partners-section h2, #contact h2 { text-align: center; }
+    #notion-section ul { list-style-type: none; padding: 0; max-width: 700px; margin: 0 auto; }
+    #notion-section li { margin-bottom: 1.2em; padding: 1.2em; border: 1px solid var(--border-color); border-radius: 8px; background-color: var(--header-bg-color); }
     #current-time { text-align: center; margin-bottom: 2em; font-size: 1em; color: var(--text-muted-color); }
 
     /* 로고 슬라이더 */
