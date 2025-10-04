@@ -4,17 +4,17 @@
   <title>{{ page.title | default: site.title }}</title>
   
   <style>
-    /* Pretendard 폰트 */
+    /* Pretendard 폰트 불러오기 */
     @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
     /* 색상 변수 (GitHub Light 테마 기반) */
     :root {
-      --bg-color: #ffffff;
-      --header-bg-color: #f6f8fa;
+      --bg-color: #f6f8fa; /* 전체 페이지 배경색 */
+      --card-bg-color: #ffffff; /* 콘텐츠 카드 배경색 */
       --text-color: #24292f;
-      --text-muted-color: #57606a;
       --accent-color: #0969da;
       --border-color: #d0d7de;
+      --text-muted-color: #57606a;
     }
 
     /* 기본 스타일 */
@@ -23,13 +23,22 @@
         background-color: var(--bg-color);
         color: var(--text-color);
         margin: 0;
+        padding: 2em 0; /* 위아래 여백 추가 */
         line-height: 1.7;
     }
+    
+    /* ======== ▼ 전체 레이아웃 컨테이너 (수정됨) ▼ ======== */
     main {
         max-width: 900px;
         margin: 0 auto;
         padding: 1.5em;
+        background-color: var(--card-bg-color); /* 흰색 배경 카드 */
+        border: 1px solid var(--border-color); /* 테두리 */
+        border-radius: 8px; /* 둥근 모서리 */
+        box-shadow: 0 4px 12px rgba(27, 31, 35, 0.08); /* 그림자 효과 */
     }
+    /* ======== ▲ 전체 레이아웃 컨테이너 (수정됨) ▲ ======== */
+
     h1, h2, h3 {
         padding-bottom: 0.4em;
         border-bottom: 1px solid var(--border-color);
@@ -40,12 +49,12 @@
     a:hover { text-decoration: underline; }
     ul, ol { padding-left: 2em; }
     img { max-width: 100%; height: auto; border-radius: 6px; }
-
+    
     /* 헤더 및 네비게이션 */
     header, nav {
         text-align: center;
         padding: 2.5em 1em;
-        background-color: var(--header-bg-color);
+        background-color: transparent; /* 배경색 제거 (main이 배경색 담당) */
         border-bottom: 1px solid var(--border-color);
     }
     nav { padding: 1.2em; }
@@ -57,7 +66,7 @@
     #content-1-section {
         padding: 2em 0;
         text-align: center;
-        background-color: var(--header-bg-color);
+        background-color: transparent;
         border-bottom: 1px solid var(--border-color);
     }
     #content-1-section a { margin: 0 1.5em; font-weight: 500; font-size: 1.1em; }
@@ -65,7 +74,7 @@
       color: var(--text-color); cursor: default; font-weight: 700;
     }
     #content-1-section a.active-menu:hover { text-decoration: none; }
-    #content-area { padding: 1.5em; border-bottom: 1px solid var(--border-color); }
+    #content-area { padding-top: 1.5em; }
     
     /* 스타트업-데이트 */
     #content-2-section h2, #partners-section h2, #contact h2 { text-align: center; }
@@ -74,7 +83,7 @@
     #current-time { text-align: center; margin-bottom: 2em; font-size: 1em; color: var(--text-muted-color); }
 
     /* 로고 슬라이더 */
-    .slider { width: 100%; overflow: hidden; padding: 3em 0; }
+    .slider { width: 100%; overflow: hidden; padding: 3em 0; margin-top: 2em; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
     .slider-track { display: flex; width: calc(250px * 10); animation: slide 40s linear infinite; }
     .slide-item { width: 250px; padding: 0 40px; display: flex; align-items: center; justify-content: center; }
     .slide-item img { max-height: 50px; width: auto; filter: grayscale(100%); opacity: 0.7; transition: all 0.3s ease; }
