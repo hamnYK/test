@@ -4,19 +4,27 @@
   {%- include head.html -%}
 
   <body>
-    <div class="container">
+    <main>
       {{ content }}
-    </div>
+    </main>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const contentArea = document.getElementById('content-area');
-        const mainContent = document.getElementById('main-content'); // index.md 안의 정적 콘텐츠 영역
+        const mainContent = document.getElementById('main-content');
         const subMenu = document.getElementById('content-1-section');
+        const subMenuLinks = subMenu ? subMenu.querySelectorAll('a') : [];
         const homeButton = document.getElementById('home-btn');
 
-        // 동적 콘텐츠를 불러오는 함수
+        function updateActiveMenu(activeId) {
+          subMenuLinks.forEach(link => {
+            link.classList.toggle('active-menu', link.id === activeId);
+          });
+        }
+
         function loadContent(mdFile) {
+          const menuId = 'menu-' + mdFile.replace('.md', '');
+          
           fetch("{{ site.baseurl }}/" + mdFile)
             .then(response => response.ok ? response.text() : Promise.reject('파일 로딩 실패: ' + mdFile))
             .then(markdownText => {
@@ -25,33 +33,34 @@
                 contentArea.style.display = 'block';
                 const contentOnly = markdownText.replace(/---[\s\S]*?---/, '').trim();
                 contentArea.innerHTML = marked.parse(contentOnly);
+                updateActiveMenu(menuId);
               }
             })
-            .catch(error => {
-              console.error('콘텐츠 로딩 오류:', error);
-              if (contentArea) contentArea.innerHTML = '<p style="text-align: center;">콘텐츠 로딩 오류</p>';
-            });
+            .catch(error => console.error('콘텐츠 로딩 오류:', error));
         }
         
-        // Home 버튼 클릭 시 원래대로 복구
         if (homeButton) {
             homeButton.addEventListener('click', function(e){
                 e.preventDefault();
                 if (contentArea) contentArea.style.display = 'none';
                 if (mainContent) mainContent.style.display = 'block';
+                updateActiveMenu(''); // 모든 메뉴 비활성화
                 history.pushState(null, '', '{{ site.baseurl }}/');
             });
         }
 
-        // 하위 메뉴 클릭 이벤트 처리
         if (subMenu) {
             subMenu.addEventListener('click', function(e) {
-              if (e.target.tagName === 'A' && e.target.id) {
+              const targetLink = e.target.closest('a');
+              if (targetLink && targetLink.id) {
                 e.preventDefault();
+                if (targetLink.classList.contains('active-menu')) return;
+
                 let mdFile = '';
-                if (e.target.id === 'menu-solutionservice') mdFile = 'solutionservice.md';
-                if (e.target.id === 'menu-techvision') mdFile = 'techvision.md';
-                if (e.target.id === 'menu-ceoinsight') mdFile = 'ceoinsight.md';
+                if (targetLink.id === 'menu-solutionservice') mdFile = 'solutionservice.md';
+                if (targetLink.id === 'menu-techvision') mdFile = 'techvision.md';
+                if (targetLink.id === 'menu-ceoinsight') mdFile = 'ceoinsight.md';
+                
                 if(mdFile) loadContent(mdFile);
               }
             });

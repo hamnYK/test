@@ -40,17 +40,6 @@
     ul, ol { padding-left: 2em; }
     img { max-width: 100%; height: auto; }
 
-    /* ======== ▼ 활성화된 하위 메뉴 스타일 (추가됨) ▼ ======== */
-    #content-1-section a.active-menu {
-      color: var(--text-color); /* 비활성화된 것처럼 보이도록 기본 텍스트 색상 적용 */
-      cursor: default; /* 클릭할 수 없다는 것을 나타내는 커서 */
-      font-weight: 600; /* 현재 선택된 메뉴임을 강조하기 위해 굵게 표시 */
-    }
-    #content-1-section a.active-menu:hover {
-      text-decoration: none; /* 마우스를 올려도 밑줄이 생기지 않음 */
-    }
-    /* ======== ▲ 활성화된 하위 메뉴 스타일 (추가됨) ▲ ======== */
-
     /* 로고 슬라이더 스타일 */
     .slider { width: 100%; overflow: hidden; padding: 2em 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
     .slider-track { display: flex; width: calc(200px * 10); animation: slide 30s linear infinite; }
@@ -59,6 +48,16 @@
     .slide-item:hover img { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
     @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     .slider-track:hover { animation-play-state: paused; }
+
+    /* 활성화된 하위 메뉴 스타일 */
+    #content-1-section a.active-menu {
+      color: var(--text-color);
+      cursor: default;
+      font-weight: 600;
+    }
+    #content-1-section a.active-menu:hover {
+      text-decoration: none;
+    }
   </style>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>

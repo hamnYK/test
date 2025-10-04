@@ -10,8 +10,8 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
 
 <nav style="text-align: center; padding: 1em; background-color: var(--header-bg-color); border-bottom: 1px solid var(--border-color);">
   <a id="home-btn" href="{{ site.baseurl }}/" style="margin: 0 1em; font-weight: 500;">Home</a> |
-  <a href="IR_페이지_주소" style="margin: 0 1em; font-weight: 500;">IR</a> |
-  <a href="Admin_외부링크_주소" target="_blank" style="margin: 0 1em; font-weight: 500;">Admin</a>
+  <a href="#" style="margin: 0 1em; font-weight: 500;">IR</a> |
+  <a href="#" target="_blank" style="margin: 0 1em; font-weight: 500;">Admin</a>
 </nav>
 
 <section id="content-1-section" style="padding: 2em 0; text-align: center;">
@@ -20,9 +20,9 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
   <a href="#" id="menu-ceoinsight" style="margin: 0 1em;">인사이트</a>
 </section>
 
-<div id="content-area" style="display: none;"></div>
+<div id="content-area"></div>
 
-<div id="main-content">
+<div id="main-content" style="display: none;">
 
   <section id="content-2-section">
     <div id="current-time" style="text-align: center; margin-bottom: 1em; font-size: 0.9em; color: #57606a;"></div>
@@ -52,7 +52,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
       <address style="font-style: normal; line-height: 1.8;">
           <p>
               이메일: <a href="mailto:worflogy@worflogy.com">worflogy@worflogy.com</a><br>
-              전화: 010-3833-2458<br>
+              전화: 010-3333-4444<br>
               주소(본점): 경기도 의왕시 안양판교로 82, 의왕시 스타트업지원센터 8F 807
           </p>
       </address>
