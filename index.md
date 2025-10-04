@@ -6,7 +6,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
 <header style="text-align: center; padding: 2.5em 1em; background-color: transparent; border-bottom: 1px solid var(--border-color);">
   <img src="{{ site.baseurl }}/assets/images/worflogy_logo.svg" alt="워플로지 로고" style="max-height: 60px; margin-bottom: 1.5em;">
   <h1 style="font-size: 2.2em; margin: 0.5em 0; border-bottom: none;">주식회사 워플로지 (WORFLOGY Inc.)</h1>
-  <p style="font-size: 1.2em; color: var(--text-muted-color);">문제 해결을 위한 온톨로지와 AI 융합 솔루션 기술 기업</p>
+  <p style="font-size: 1.2em; color: var(--text-muted-color);">리스크 관리 (소통) {지능형 시맨틱 워크플로 솔루션 (WORFLOGY 디자인);}</p>
 </header>
 
 <nav style="text-align: center; padding: 1.2em; background-color: var(--header-bg-color); border-bottom: 1px solid var(--border-color);">
