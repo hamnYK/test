@@ -51,11 +51,12 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
     <h2>회사 정보</h2>
     <address>
         <p>
-            이메일: <a href="mailto:worflogy@worflogy.com">worflogy@worflogy.com</a><br>
+            문의<br>
+            <a href="mailto:worflogy@worflogy.com">worflogy@worflogy.com</a> | <a href="mailto:worflogy@gmail.com">worflogy@gmail.com</a><br><br>
             주소(본점): 경기도 의왕시 안양판교로 82, 8층 807호 (의왕시 스타트업지원센터)<br>
             사업자등록번호: 580-88-03419<br>
             법인등록번호: 131111-0077069<br>
-            대표: 함영국 (Hamn, YoungKuk) <a href="mailto:worflogy@gmail.com">worflogy@gmail.com</a><br>
+            대표: 함영국 (Hamn, YoungKuk)
         </p>
     </address>
 </section>
