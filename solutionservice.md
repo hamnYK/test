@@ -8,7 +8,7 @@
 
 문제의 본질은 단순히 '의사결정의 과정의 비효율성'이 아니었습니다. 그것은 **'인간의 판단 과정에 내재된 불확실성'**이었습니다.
 
-<img src="{{ site.baseurl }}/assets/articles/TV_Research.png" alt="2007년 불확실성 관리 연구 시작">
+![연구](/assets/articles/TV_Research.png)
 
 ### 2014년 - 2017년: 문제 해결을 위한 기술적 접근
 
