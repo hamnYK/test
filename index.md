@@ -13,7 +13,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
   <nav>
     <a href="{{ site.baseurl }}/">Home</a> |
     <a href="#">IR</a> |
-    <a href="#" target="_blank">Admin</a>
+    <a href="https://docs.google.com/spreadsheets/d/1lVdA_YIePXFhofIH-OcDZaNUQbtxsbenwas8LmVE8uA/edit?usp=sharing" target="_blank">Admin.</a>
   </nav>
 
   <nav id="content-section">
