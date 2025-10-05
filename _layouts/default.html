@@ -10,23 +10,6 @@
         const contentArea = document.getElementById('content-area');
         const subMenu = document.getElementById('content-section');
         const subMenuLinks = subMenu ? subMenu.querySelectorAll('a') : [];
-        
-        // Jekyll의 baseurl을 JavaScript 변수로 지정
-        const siteBaseUrl = '{{ site.baseurl }}';
-
-        // marked.js에 대한 사용자 정의 렌더러 설정
-        const renderer = new marked.Renderer();
-        const originalImageRenderer = renderer.image;
-        renderer.image = function(href, title, text) {
-          // 이미지 경로(href)가 http로 시작하지 않는 상대 경로인 경우에만 baseurl 추가
-          if (!href.startsWith('http')) {
-            href = siteBaseUrl + (href.startsWith('/') ? href : '/' + href);
-          }
-          return originalImageRenderer.call(this, href, title, text);
-        };
-
-        // 사용자 정의 렌더러를 marked.js에 적용
-        marked.use({ renderer: renderer });
 
         function updateActiveMenu(activeId) {
           subMenuLinks.forEach(link => {
@@ -36,12 +19,11 @@
 
         function loadContent(mdFile) {
           const menuId = 'menu-' + mdFile.replace('.md', '');
-          fetch(siteBaseUrl + "/" + mdFile) // fetch 경로에도 baseurl 적용
+          fetch("{{ site.baseurl }}/" + mdFile)
             .then(response => response.ok ? response.text() : Promise.reject('파일 로딩 실패: ' + mdFile))
             .then(markdownText => {
               if (contentArea) {
                 const contentOnly = markdownText.replace(/---[\s\S]*?---/, '').trim();
-                // marked.parse는 수정된 이미지 경로를 생성
                 contentArea.innerHTML = marked.parse(contentOnly);
                 updateActiveMenu(menuId);
               }
