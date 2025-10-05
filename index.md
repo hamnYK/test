@@ -33,14 +33,14 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
       <li><strong>2025.09.24</strong>: IRM: Rethinking GRC (Governance, Risk and Compliance) in the AI Era 세미나·PoC 참여</li>
       <li><strong>2025.09.23</strong>: 경기도 의왕시 IP 지원 사업 선정</li>
       <li><strong>2025.09.20</strong>: 고려대학교 AI 연구원 연구개발 협업 로드맵 수립</li>
-      <li><strong>2025.09.15</strong>: IRM HQ: Board of Directors 투표 실시 (Risk MGT. AX with xAI 네트워크)</li>
+      <li><strong>2025.09.15</strong>: IRM HQ: Board of Directors 투표 (Risk MGT. AX with xAI 네트워크)</li>
       <li><strong>2025.08.27</strong>: 고려대학교 AI 연구원 Tech-Day 참여</li>
       <li><strong>2025.08.18</strong>: 경기도 의왕시 스타트업지원센터 입주</li>
       <li><strong>2025.08.18</strong>: SaaS 솔루션 상표 CONTEXTON 사용 (2025.10월 계약)</li>
       <li><strong>2025.08.08</strong>: <a href="https://hiai.korea.ac.kr" target="_blank">고려대학교 AI 연구원 파트너 등록</a></li>
       <li><strong>2025.07.16</strong>: 사업자등록 (업무 시작: 2025.07.20)</li>
       <li><strong>2025.07.10</strong>: 주식회사 워플로지 설립</li>
-      <li><strong>2025.07.10</strong>: WORFLOGY 상표 및 특허 기술 실시 계약</li>
+      <li><strong>2025.07.10</strong>: WORFLOGY 상표 및 특허(10-1791086) 기술 실시 계약</li>
     </ul>
   </section>
 
