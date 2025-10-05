@@ -17,9 +17,9 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
   </nav>
 
   <nav id="content-section">
-    <a href="#" id="menu-solutionservice">솔루션·서비스</a> |
-    <a href="#" id="menu-techvision">기술·비전</a> |
-    <a href="#" id="menu-ceoinsight">인사이트</a>
+    <a href="#" id="menu-solutionservice">서비스 솔루션</a> |
+    <a href="#" id="menu-techvision">기술 비전</a> |
+    <a href="#" id="menu-ceoinsight">CEO 인사이트</a>
   </nav>
 
   <article id="content-area"></article>
