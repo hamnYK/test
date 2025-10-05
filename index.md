@@ -64,7 +64,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
     </article>
     <article>
       <figure>
-        <img src="{{ site.baseurl }}/assets/images/2025.08_KU_Tech-Day.png" alt="2025년 고려대학교 AI 연구원 Tech-Day">
+        <img src="{{ site.baseurl }}/assets/images/2025.08_KU_Tech-Day.jpg" alt="2025년 고려대학교 AI 연구원 Tech-Day">
         <figcaption>
           <p>고려대학교 AI 연구원 협력 기업 | 2025년 Tech-Day | 임희석 연구원장·함영국 대표</p>
         </figcaption>
