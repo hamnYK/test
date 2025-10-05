@@ -1,8 +1,3 @@
----
-layout: default
-title: WORFLOGY Inc. Vision and Tech.
----
-
 # 워플로지의 비전과 기술: 측정할 수 없는 것에 대한 해답
 
 ---
