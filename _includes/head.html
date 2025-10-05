@@ -49,6 +49,8 @@
     a { color: var(--accent-color); text-decoration: none; }
     a:hover { text-decoration: underline; }
     address { font-style: normal; }
+
+    /* 이미지 기본 스타일 */
     img {
       max-width: 100%;
       height: auto;
@@ -83,9 +85,15 @@
     /* 로고 슬라이더 */
     .slider { width: 100%; overflow: hidden; padding: 3em 0; margin-top: 2em; border-top: 1px solid var(--border-color); }
     .slider-track { display: flex; width: calc(250px * 10); animation: slide 40s linear infinite; }
-    .slide-item { width: 250px; padding: 0 40px; display: flex; align-items: center; justify-content: center; }
-
-    /* 슬라이더 내 이미지 스타일 */
+    .slide-item { 
+      width: 250px; 
+      padding: 0 40px; 
+      display: flex; 
+      flex-direction: column; /* 아이템 내부 정렬을 세로로 변경 */
+      align-items: center; 
+      justify-content: center; 
+      position: relative; /* 캡션 위치 기준점 */
+    }
     .slide-item img { 
       max-height: 50px; 
       width: auto; 
@@ -94,7 +102,31 @@
       transition: all 0.3s ease;
       margin: 0;
     }
-    .slide-item:hover img { filter: grayscale(0%); opacity: 1; transform: scale(1.05); }
+    .slide-item:hover img { 
+      filter: grayscale(0%); 
+      opacity: 1; 
+      transform: scale(1.05); 
+    }
+    
+    /* 슬라이더 캡션 스타일 */
+    .slide-caption {
+      opacity: 0; /* 평소에는 숨김 */
+      visibility: hidden;
+      position: absolute;
+      bottom: -30px; /* 이미지 아래에 위치 */
+      font-size: 0.8em;
+      color: var(--text-muted-color);
+      background-color: var(--card-bg-color);
+      padding: 2px 8px;
+      border-radius: 4px;
+      white-space: nowrap; /* 캡션이 길어도 한 줄로 표시 */
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .slide-item:hover .slide-caption {
+      opacity: 1; /* 마우스를 올리면 보이게 함 */
+      visibility: visible;
+    }
+
     @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     .slider-track:hover { animation-play-state: paused; }
   </style>
