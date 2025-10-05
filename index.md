@@ -48,10 +48,10 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
     <h2>연구개발 네트워크</h2>
     <div class="slider">
       <div class="slider-track">
-        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo1.png" alt="협력기관 1"></div>
+        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/KU_HiAI.png" alt="고려대학교 AI 연구원"></div>
         <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo2.png" alt="협력기관 2"></div>
         <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo3.png" alt="협력기관 3"></div>
-        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo1.png" alt="협력기관 1"></div>
+        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/KU_HiAI.png" alt="고려대학교 AI 연구원"></div>
         <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo2.png" alt="협력기관 2"></div>
         <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo3.png" alt="협력기관 3"></div>
       </div>
