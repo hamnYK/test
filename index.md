@@ -30,10 +30,10 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
     <script src="{{ site.baseurl }}/timeSync.js"></script>
     <ul>
       <li><strong>2025.09.25</strong>: 경기도 의왕시 유니콘로드 CEO 워크숍</li>
-      <li><strong>2025.09.24</strong>: IRM: Rethinking GRC (Governance, Risk and Compliance) in the AI Era 세미나 & PoC 참여</li>
+      <li><strong>2025.09.24</strong>: IRM: Rethinking GRC (Governance, Risk and Compliance) in the AI Era 세미나·PoC 참여</li>
       <li><strong>2025.09.23</strong>: 경기도 의왕시 IP 지원 사업 선정</li>
       <li><strong>2025.09.20</strong>: 고려대학교 AI 연구원과 R&D 협업 로드맵 수립</li>
-      <li><strong>2025.09.15</strong>: IRM HQ: Board of Directors 투표 실시 (Risk Mgt. AX with xAI 네트워킹)</li>
+      <li><strong>2025.09.15</strong>: IRM HQ: Board of Directors 투표 실시 (Risk MGT. AX with xAI 네트워크)</li>
       <li><strong>2025.08.27</strong>: 고려대학교 AI 연구원 Tech-Day 참여</li>
       <li><strong>2025.08.18</strong>: 경기도 의왕시 스타트업지원센터 입주</li>
       <li><strong>2025.08.18</strong>: SaaS 솔루션 상표 CONTEXTON 사용 (2025.10월 계약)</li>
