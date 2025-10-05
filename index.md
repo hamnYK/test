@@ -45,7 +45,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
   </section>
 
   <section id="media-section">
-    <h2>미디어</h2>
+    <h2>미디어업-데이트</h2>
     <article>
       <figure>
         <video src="{{ site.baseurl }}/assets/audios/2025.09_Podcast_Korean.m4a" controls width="100%" height="80px"></video>
