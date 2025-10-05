@@ -10,6 +10,20 @@
         const contentArea = document.getElementById('content-area');
         const subMenu = document.getElementById('content-section');
         const subMenuLinks = subMenu ? subMenu.querySelectorAll('a') : [];
+        
+        // Jekyll의 baseurl 값을 JavaScript 변수로 가져옴
+        const siteBaseUrl = '{{ site.baseurl }}';
+
+        // [수정됨] marked.js의 walkTokens를 사용하여 이미지 경로를 안전하게 수정
+        const walkTokens = (token) => {
+          if (token.type === 'image' && !token.href.startsWith('http')) {
+            // 이미지 경로(href)가 절대경로('/')로 시작하면 baseurl을 앞에 붙여줌
+            if (token.href.startsWith('/')) {
+              token.href = siteBaseUrl + token.href;
+            }
+          }
+        };
+        marked.use({ walkTokens });
 
         function updateActiveMenu(activeId) {
           subMenuLinks.forEach(link => {
@@ -19,16 +33,26 @@
 
         function loadContent(mdFile) {
           const menuId = 'menu-' + mdFile.replace('.md', '');
-          fetch("{{ site.baseurl }}/" + mdFile)
-            .then(response => response.ok ? response.text() : Promise.reject('파일 로딩 실패: ' + mdFile))
+          // fetch 경로에도 baseurl을 적용
+          fetch(siteBaseUrl + "/" + mdFile)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('파일 로딩 실패: ' + response.statusText);
+              }
+              return response.text();
+            })
             .then(markdownText => {
               if (contentArea) {
+                // Jekyll front matter(---로 둘러싸인 부분)를 제거
                 const contentOnly = markdownText.replace(/---[\s\S]*?---/, '').trim();
                 contentArea.innerHTML = marked.parse(contentOnly);
                 updateActiveMenu(menuId);
               }
             })
-            .catch(error => console.error('콘텐츠 로딩 오류:', error));
+            .catch(error => {
+              console.error('콘텐츠 로딩 오류:', error);
+              if(contentArea) contentArea.innerHTML = "<p>콘텐츠를 불러오는 데 실패했습니다. 파일 경로를 확인해주세요.</p>";
+            });
         }
 
         if (subMenu) {
@@ -45,7 +69,7 @@
             });
         }
         
-        // 페이지 첫 로드 시 기본 콘텐츠 로딩
+        // 페이지 첫 로드 시 기본 콘텐츠를 로딩합니다.
         if (contentArea) {
             loadContent('solutionservice.md');
         }
