@@ -25,10 +25,9 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
   <article id="content-area"></article>
 
   <section id="notion-section">
+    <h2>스타트업-데이트</h2>
     <div id="current-time"></div>
     <script src="{{ site.baseurl }}/timeSync.js"></script>
-
-    <h2>스타트업-데이트</h2>
     <ul>
       <li><strong>2025-10-04</strong>: <a href="https://example.com" target="_blank">주요 파트너십 체결</a></li>
       <li><strong>2025-09-15</strong>: 정부 R&D 과제 선정</li>
