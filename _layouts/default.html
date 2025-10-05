@@ -4,6 +4,7 @@
   <body>
     {{ content }}
 
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const contentArea = document.getElementById('content-area');
@@ -44,7 +45,10 @@
             });
         }
         
-        loadContent('solutionservice.md');
+        // 페이지 첫 로드 시 기본 콘텐츠 로딩
+        if (contentArea) {
+            loadContent('solutionservice.md');
+        }
       });
     </script>
   </body>
