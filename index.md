@@ -48,7 +48,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
 </section>
 
 <section id="contact">
-    <h2>문의</h2>
+    <h2>연락 정보</h2>
     <address>
         <p>
             문의<br>
