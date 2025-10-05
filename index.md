@@ -47,8 +47,17 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
 <section id="media-section">
   <h2>미디어업-데이트</h2>
   <ul>
-      <li><img src="{{ site.baseurl }}/assets/images/2025.08_KU_Tech-Day.png" alt="2025년 고려대학교 AI 연구원 Tech-Day"><br>
-          2025년 고려대학교 AI 연구원 Tech-Day 협력 | 임희석 연구원장 - 워플로지 대표
+      <li><p>오디오 팟캐스트 [한국어]</p>
+          <video src="{{ site.baseurl }}/assets/audios/2025.09_Podcast_Korean.m4a" controls width="100%" height="80px"></video>
+      </li>
+      <li><p>오디오 팟캐스트 [영어]</p>
+          <video src="{{ site.baseurl }}/assets/audios/2025.09_Podcast_English.m4a" controls width="100%" height="80px"></video>
+      </li>
+      <li><img src="{{ site.baseurl }}/assets/images/2025.08_KU_Tech-Day.png" alt="2025년 고려대학교 AI 연구원 Tech-Day">
+          <p>고려대학교 AI 연구원 협력 기업 | 2025년 Tech-Day | 임희석 연구원장, 함영국 대표</P>
+      </li>
+      <li><img src="{{ site.baseurl }}/assets/images/2025.09_Unicorn_Workshop.jpg" alt="2025년 의왕시 유니콘로드 CEO 워크숍">
+          <p>경기도 의왕시 스타트업 CEO 네트워크 | 2025년 유니콘로드 워크숍</p>
       </li>
   </ul>
 </section>
