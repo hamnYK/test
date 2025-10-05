@@ -90,8 +90,8 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
         <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/UiWang_City.png" alt="의왕시 스타트업지원센터">
           <span class="slide-caption">의왕시 스타트업지원센터</span>
         </div>
-        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/IRM.png" alt="영국 리스크 관리 학회">
-          <span class="slide-caption">영국 리스크 관리 학회</span>
+        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/IRM.png" alt="리스크관리 협회 (IRM)">
+          <span class="slide-caption">리스크관리 협회 (IRM | 1986)</span>
         </div>
         <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/KU_HiAI.png" alt="고려대학교 AI 연구원">
           <span class="slide-caption">고려대학교 AI 연구원</span>
@@ -99,8 +99,8 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
         <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/UiWang_City.png" alt="의왕시 스타트업지원센터">
           <span class="slide-caption">의왕시 스타트업지원센터</span>
         </div>
-        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/IRM.png" alt="영국 리스크 관리 학회">
-          <span class="slide-caption">영국 리스크 관리 학회</span>
+        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/IRM.png" alt="리스크관리 협회 (IRM)">
+          <span class="slide-caption">리스크관리 협회 (IRM | 1986)</span>
         </div>
       </div>
     </div>
