@@ -4,18 +4,20 @@
   <title>{{ page.title | default: site.title }}</title>
   
   <style>
-    /* Pretendard 폰트 */
+    /* Pretendard 폰트 불러오기 */
     @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-    /* 색상 변수 (GitHub Light 테마) */
+    /* ======== ▼ 색상 변수 (VS Code Quiet Light 테마) ▼ ======== */
     :root {
-      --bg-color: #f6f8fa;
-      --card-bg-color: #ffffff;
-      --text-color: #24292f;
-      --accent-color: #0969da;
-      --border-color: #d0d7de;
-      --text-muted-color: #57606a;
+      --bg-color: #f5f5f5;          /* 전체 페이지 배경색 (더 부드러운 회색) */
+      --card-bg-color: #ffffff;     /* 콘텐츠 카드 배경색 (흰색) */
+      --header-bg-color: #fafafa;    /* 헤더/네비게이션 배경색 (약간의 회색) */
+      --text-color: #383a42;        /* 기본 텍스트 색상 (차분한 검은색) */
+      --accent-color: #4078f2;      /* 링크 등 강조 색상 (부드러운 파란색) */
+      --border-color: #eaeaeb;      /* 테두리 색상 (더 옅은 회색) */
+      --text-muted-color: #a0a1a7;  /* 보조 텍스트 색상 */
     }
+    /* ======== ▲ 색상 변수 (VS Code Quiet Light 테마) ▲ ======== */
 
     /* 기본 스타일 */
     body {
@@ -23,11 +25,11 @@
         background-color: var(--bg-color);
         color: var(--text-color);
         margin: 0;
-        padding: 2em 0;
+        padding: 2em 1em; /* 위아래, 좌우 여백 */
         line-height: 1.7;
     }
     
-    body > main { /* body 바로 아래의 main 태그에만 카드 스타일 적용 */
+    main {
         max-width: 900px;
         margin: 0 auto;
         background-color: var(--card-bg-color);
@@ -47,18 +49,13 @@
     img { max-width: 100%; height: auto; border-radius: 6px; }
     
     /* 각 시맨틱 영역 스타일 */
-    header, nav, footer, section, article, aside {
-        padding: 1.5em;
-    }
     header, nav {
         text-align: center;
         padding: 2.5em 1.5em;
         background-color: var(--header-bg-color);
     }
     header { border-radius: 8px 8px 0 0; border-bottom: 1px solid var(--border-color); }
-
-    /* body > main > nav:first-of-type : 메인 네비게이션 바 */
-    body > main > nav:first-of-type { padding: 1.2em 1.5em; border-bottom: 1px solid var(--border-color); }
+    nav { padding: 1.2em 1.5em; border-bottom: 1px solid var(--border-color); }
     header h1 { font-size: 2.2em; margin: 0.5em 0; border-bottom: none; }
     header p { font-size: 1.2em; color: var(--text-muted-color); }
     nav a { margin: 0 1.5em; font-weight: 500; font-size: 1.1em; }
@@ -68,15 +65,18 @@
         text-align: center;
         background-color: var(--header-bg-color);
         border-bottom: 1px solid var(--border-color);
+        padding: 1.5em;
     }
     #content-section a { margin: 0 1.5em; font-weight: 500; font-size: 1.1em; }
     #content-section a.active-menu { color: var(--text-color); cursor: default; font-weight: 700; }
     #content-section a.active-menu:hover { text-decoration: none; }
+    article#content-area { padding: 1.5em; }
     
     /* 스타트업-데이트 */
+    section, aside { padding: 1.5em; }
     #notion-section h2, #partners-section h2, #contact h2 { text-align: center; }
-    #notion-section ul { list-style-type: none; padding: 0; max-width: 700px; margin: 0 auto; }
-    #notion-section li { margin-bottom: 1.2em; padding: 1.2em; border: 1px solid var(--border-color); border-radius: 8px; background-color: var(--header-bg-color); }
+    #notion-section ul { list-style-type: none; padding: 0; max-width: 100%; }
+    #notion-section li { margin-bottom: 1em; padding: 1.2em; border: 1px solid var(--border-color); border-radius: 8px; background-color: var(--header-bg-color); }
     #current-time { text-align: center; margin-bottom: 2em; font-size: 1em; color: var(--text-muted-color); }
 
     /* 로고 슬라이더 */
