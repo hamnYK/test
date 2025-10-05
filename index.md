@@ -3,49 +3,51 @@ layout: default
 title: 주식회사 워플로지 (WORFLOGY Inc.)
 ---
 
-<header>
-  <img src="{{ site.baseurl }}/assets/images/worflogy_logo.svg" alt="워플로지 로고" style="max-height: 60px; margin-bottom: 1.5em;">
-  <h1>주식회사 워플로지 (WORFLOGY Inc.)</h1>
-  <p>Worflogy: 리스크 관리 (소통) {AI 솔루션 (시맨틱 워크플로 디자인);}</p>
-</header>
+<main>
+  <header>
+    <img src="{{ site.baseurl }}/assets/images/worflogy_logo.svg" alt="워플로지 로고" style="max-height: 60px; margin-bottom: 1.5em;">
+    <h1>주식회사 워플로지 (WORFLOGY Inc.)</h1>
+    <p>Worflogy: 리스크 관리 (소통) {AI 솔루션 (시맨틱 워크플로 디자인);}</p>
+  </header>
 
-<nav>
-  <a href="{{ site.baseurl }}/">Home</a> |
-  <a href="#">IR</a> |
-  <a href="#" target="_blank">Admin</a>
-</nav>
+  <nav>
+    <a href="{{ site.baseurl }}/">Home</a> |
+    <a href="#">IR</a> |
+    <a href="#" target="_blank">Admin</a>
+  </nav>
 
-<section id="content-1-section">
-  <a href="#" id="menu-solutionservice">솔루션·서비스</a> |
-  <a href="#" id="menu-techvision">기술·비전</a> |
-  <a href="#" id="menu-ceoinsight">인사이트</a>
-</section>
+  <nav id="content-section">
+    <a href="#" id="menu-solutionservice">솔루션·서비스</a> |
+    <a href="#" id="menu-techvision">기술·비전</a> |
+    <a href="#" id="menu-ceoinsight">인사이트</a>
+  </nav>
 
-<div id="content-area"></div>
+  <article id="content-area"></article>
 
-<section id="content-2-section">
-  <div id="current-time"></div>
-  <script src="{{ site.baseurl }}/timeSync.js"></script>
-  <h2>스타트업-데이트</h2>
-  <ul>
-    <li><strong>2025-10-04</strong>: <a href="https://example.com" target="_blank">주요 파트너십 체결</a></li>
-    <li><strong>2025-09-15</strong>: 정부 R&D 과제 선정</li>
-  </ul>
-</section>
+  <section id="notion-section">
+    <div id="current-time"></div>
+    <script src="{{ site.baseurl }}/timeSync.js"></script>
 
-<section id="partners-section">
-  <h2>연구개발 네트워크</h2>
-  <div class="slider">
-    <div class="slider-track">
-      <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo1.png" alt="협력기관 1"></div>
-      <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo2.png" alt="협력기관 2"></div>
-      <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo3.png" alt="협력기관 3"></div>
-      <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo1.png" alt="협력기관 1"></div>
-      <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo2.png" alt="협력기관 2"></div>
-      <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo3.png" alt="협력기관 3"></div>
+    <h2>스타트업-데이트</h2>
+    <ul>
+      <li><strong>2025-10-04</strong>: <a href="https://example.com" target="_blank">주요 파트너십 체결</a></li>
+      <li><strong>2025-09-15</strong>: 정부 R&D 과제 선정</li>
+    </ul>
+  </section>
+
+  <aside id="partners-section">
+    <h2>연구개발 네트워크</h2>
+    <div class="slider">
+      <div class="slider-track">
+        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo1.png" alt="협력기관 1"></div>
+        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo2.png" alt="협력기관 2"></div>
+        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo3.png" alt="협력기관 3"></div>
+        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo1.png" alt="협력기관 1"></div>
+        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo2.png" alt="협력기관 2"></div>
+        <div class="slide-item"><img src="{{ site.baseurl }}/assets/partners/logo3.png" alt="협력기관 3"></div>
+      </div>
     </div>
-  </div>
-</section>
+  </aside>
 
 <section id="contact">
     <h2>연락 정보</h2>
@@ -62,6 +64,7 @@ title: 주식회사 워플로지 (WORFLOGY Inc.)
     </address>
 </section>
 
-<footer>
-    <p>&copy; 2025 WORFLOGY Inc. All rights reserved.</p>
-</footer>
+  <footer>
+      <p>&copy; 2025 WORFLOGY Inc. All rights reserved.</p>
+  </footer>
+</main>
