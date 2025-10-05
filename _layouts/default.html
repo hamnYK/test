@@ -61,7 +61,7 @@
               if (targetLink && targetLink.id && !targetLink.classList.contains('active-menu')) {
                 e.preventDefault();
                 let mdFile = '';
-                if (targetLink.id === 'menu-solutionservice') mdFile = 'solutionservice.md';
+                if (targetLink.id === 'menu-servicesolution') mdFile = 'solutionservice.md';
                 if (targetLink.id === 'menu-techvision') mdFile = 'techvision.md';
                 if (targetLink.id === 'menu-ceoinsight') mdFile = 'ceoinsight.md';
                 if (mdFile) loadContent(mdFile);
@@ -71,7 +71,7 @@
         
         // 페이지 첫 로드 시 기본 콘텐츠를 로딩합니다.
         if (contentArea) {
-            loadContent('solutionservice.md');
+            loadContent('servicesolution.md');
         }
       });
     </script>
