@@ -49,4 +49,4 @@
 > - 아래 이메일로 현재 겪고 계신 문제나 궁금한 점을 간단히 보내주세요.
 > - 작은 고민이라도 괜찮습니다. 함께 이야기하며 해결의 실마리를 찾아 드리겠습니다.
 
-**[문의하기: worflogy@worflogy.com](mailto:worflogy@worflogy.com)**
+[문의하기: worflogy@worflogy.com](mailto:worflogy@worflogy.com)
