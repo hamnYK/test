@@ -59,8 +59,8 @@
       line-height: 1.8; /* 줄 간격 넓혀서 가독성 향상 */
       text-align: left;   /* 긴 글은 왼쪽 정렬이 읽기 편함 */
     }
-    header p {
-      text-align: center; /* 헤더의 p 태그만 가운데 정렬 */
+    header p, footer p {
+      text-align: center; /* 헤더와 푸터의 p 태그만 가운데 정렬 (수정된 부분) */
     }
     #notion-section ul { list-style: none; padding: 0; max-width: 100%; text-align: left; } /* 목록도 왼쪽 정렬 */
     address { font-style: normal; }
@@ -190,7 +190,7 @@
       font-weight: 700;
     }
 
-    /* --- #content-area 내부 테이블 스타일 (추가된 부분) --- */
+    /* --- #content-area 내부 테이블 스타일 --- */
     #content-area table {
       width: 100%;
       margin-top: 2em;
