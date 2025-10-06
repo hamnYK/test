@@ -18,7 +18,10 @@
       --border-color: #e9ecef; /* 기존보다 약간 더 부드러운 색으로 변경 */
     }
 
-    /* 기본 스타일 및 레이아웃 */
+    /* ... body, main, header, footer, section, article, aside, nav ... */
+    /* ... h1, h2, p, a 등 타이포그래피 스타일 ... */
+    /* ... #content-section, #notion-section 등 컴포넌트 스타일 ... */
+    
     body {
       font-family: 'Pretendard', sans-serif;
       font-weight: 400; /* 기본 폰트 두께 명시 */
@@ -112,10 +115,14 @@
     #media-section img { margin-bottom: 1em; }
 
     #current-time { text-align: center; margin-bottom: 2em; font-size: 1em; color: var(--text-muted-color); }
-
-    /* 로고 슬라이더 */
+    
+    /* 로고 슬라이더 (수정된 부분) */
     .slider { width: 100%; overflow: hidden; padding: 2em 0; margin-top: 1em; }
-    .slider-track { display: flex; width: calc(250px * 10); animation: slide 40s linear infinite; }
+    .slider-track { 
+      display: flex; 
+      width: calc(250px * 6); /* 너비 계산 수정: 250px * 로고 6개(원본3+복제3) */
+      animation: slide 60s linear infinite; /* 애니메이션 속도 조정: 40s -> 60s */
+    }
     .slide-item { width: 250px; padding: 0 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
     .slide-item img { max-height: 50px; width: auto; filter: grayscale(100%); opacity: 0.6; transition: all 0.3s ease; margin: 0; }
     .slide-item:hover img { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
@@ -150,7 +157,7 @@
       h1 { font-size: 2em; } /* 제목 폰트 크기 조정 */
       h2 { font-size: 1.5em; }
 
-      /* 모바일 메뉴 스타일 (언어 변경 시 줄바꿈 방지) (수정된 부분) */
+      /* 모바일 메뉴 스타일 (언어 변경 시 줄바꿈 방지) */
       #content-section {
         display: flex;
         flex-direction: column; /* 메뉴 항목을 세로로 쌓음 */
