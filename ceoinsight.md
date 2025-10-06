@@ -22,23 +22,7 @@ RiskMgt.Workflow = {<br>
     }<br>
 };
 
+<div id="giscus-container"></div>
+
 > **CEO 성장 서사(스토리텔링) 그래픽**<br>
 ![CEO 프로필](/assets/articles/CI_footprint.png)
-
----
-
-<script src="https://giscus.app/client.js"
-        data-repo="hamnYK/WorfBS"
-        data-repo-id="R_kgDOP1voKQ"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOP1voKc4Cv0rD"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="ko"
-        crossorigin="anonymous"
-        async>
-</script>
