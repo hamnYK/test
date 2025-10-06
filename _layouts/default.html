@@ -75,7 +75,7 @@
             })
             .then(markdownText => {
               if (contentArea) {
-                const contentOnly = markdownText.replace(/---[\s\S]*?---/, '').trim();
+                const contentOnly = markdownText.replace(/^---[\s\S]*?---\s*/, '').trim();
                 contentArea.innerHTML = marked.parse(contentOnly);
                 updateActiveMenu(menuId);
                 loadGiscus(); 
