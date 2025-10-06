@@ -7,24 +7,25 @@
     /* Pretendard 폰트 불러오기 */
     @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-    /* --- 제안하는 새로운 색상 팔레트 --- */
+    /* --- 색상 팔레트 (테두리 색상 미세 조정) --- */
     :root {
-      --primary-color: #005A9C; /* 신뢰감 있는 짙은 파란색 */
-      --accent-color: #00A98F;  /* 생동감 있는 청록색 포인트 */
-      --bg-color: #f8f9fa;      /* 눈이 편안한 연한 배경색 */
-      --card-bg-color: #ffffff; /* 카드 배경은 순백색으로 */
-      --text-color: #343a40;      /* 부드러운 짙은 회색 텍스트 */
-      --text-muted-color: #6c757d;/* 보조 텍스트 색상 */
-      --border-color: #dee2e6;   /* 경계선 색상 */
+      --primary-color: #005A9C;
+      --accent-color: #00A98F;
+      --bg-color: #f8f9fa;
+      --card-bg-color: #ffffff;
+      --text-color: #343a40;
+      --text-muted-color: #6c757d;
+      --border-color: #e9ecef; /* 기존보다 약간 더 부드러운 색으로 변경 */
     }
 
     /* 기본 스타일 및 레이아웃 */
     body {
       font-family: 'Pretendard', sans-serif;
+      font-weight: 400; /* 기본 폰트 두께 명시 */
       margin: 0;
-      padding: 2em;
-      background-color: var(--bg-color); /* 새로운 배경색 적용 */
-      color: var(--text-color);         /* 새로운 텍스트 색상 적용 */
+      padding: 3em; /* 전체적인 외부 여백 확보 */
+      background-color: var(--bg-color);
+      color: var(--text-color);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -35,186 +36,109 @@
       text-align: center;
     }
     header, footer, section, article, aside {
-      background-color: var(--card-bg-color); /* 새로운 카드 배경색 */
+      background-color: var(--card-bg-color);
       border: 1px solid var(--border-color);
-      border-radius: 12px; /* 부드러운 느낌을 위해 border-radius 증가 */
-      padding: 2em 2.5em; /* 내부 여백을 좀 더 확보 */
-      margin-bottom: 2em; /* 섹션 간 간격 증가 */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* 깊이감을 위한 그림자 추가 */
+      border-radius: 16px; /* 더 부드러운 곡선 */
+      padding: 3em; /* 상하좌우 여백 통일 */
+      margin-bottom: 2.5em; /* 섹션 간 간격 조정 */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); /* 그림자 효과를 더 은은하게 */
     }
-    nav { margin-bottom: 1.5em; }
+    nav { margin-bottom: 2em; } /* 메뉴와 카드 간격 조정 */
 
-    /* --- 타이포그래피 및 가독성 개선 --- */
+    /* --- 타이포그래피 위계 강화 --- */
     h1, h2, h3 { color: var(--text-color); }
-    h1 { font-size: 2.2em; margin-bottom: 0.5em; }
+    h1 { font-size: 2.5em; font-weight: 700; margin-bottom: 0.5em; } /* 크기와 두께 강조 */
     h2 { 
-      font-size: 1.6em; 
-      color: var(--primary-color); /* 주 색상으로 강조 */
+      font-size: 1.75em; /* h1과의 차이를 더 명확하게 */
+      font-weight: 600;
+      color: var(--primary-color);
       border-bottom: 2px solid var(--border-color); 
-      padding-bottom: 0.6em; 
+      padding-bottom: 0.8em; 
       margin-top: 0;
-      margin-bottom: 1.5em; /* 제목과 내용 간 간격 확보 */
+      margin-bottom: 1.5em;
     }
     p { 
-      line-height: 1.8; /* 줄 간격 넓혀서 가독성 향상 */
-      text-align: left;   /* 긴 글은 왼쪽 정렬이 읽기 편함 */
+      line-height: 1.8;
+      text-align: left;
     }
     header p, footer p {
-      text-align: center; /* 헤더와 푸터의 p 태그만 가운데 정렬 (수정된 부분) */
+      text-align: center;
     }
-    #notion-section ul { list-style: none; padding: 0; max-width: 100%; text-align: left; } /* 목록도 왼쪽 정렬 */
+    #notion-section ul { list-style: none; padding: 0; max-width: 100%; text-align: left; }
     address { font-style: normal; }
 
-    a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+    a { color: var(--primary-color); text-decoration: none; font-weight: 500; transition: color 0.2s ease; }
     a:hover { color: var(--accent-color); text-decoration: underline; }
 
     /* 이미지 기본 스타일 */
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      display: block;
-      margin: 1.5em auto;
-    }
+    img { max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 1.5em auto; }
 
-    /* --- 컴포넌트별 스타일 개선 --- */
+    /* --- 컴포넌트별 스타일 정제 --- */
+    /* 메뉴 링크 스타일 변경 */
     #content-section a {
       margin: 0 0.5em;
-      padding: 0.6em 1.2em;
+      padding: 0.7em 1.4em; /* 패딩 증가 */
       border-radius: 8px;
-      transition: all 0.3s ease;
-      font-weight: 600;
+      transition: background-color 0.2s ease, color 0.2s ease; /* 전환 효과 수정 */
+      font-weight: 500; /* 두께를 보통으로 낮춰 편안하게 */
       border: 1px solid transparent;
     }
     #content-section a:hover {
-      background-color: var(--bg-color);
+      background-color: #e9ecef; /* 은은한 배경색으로 호버 피드백 */
       color: var(--primary-color);
       text-decoration: none;
     }
     #content-section a.active-menu {
-      background-color: var(--primary-color); /* 활성화 메뉴 강조 */
+      background-color: var(--primary-color);
       color: #ffffff;
       text-decoration: none;
       border-color: var(--primary-color);
+      font-weight: 600; /* 활성화된 메뉴만 강조 */
     }
     
+    /* '스타트업-데이트' 목록 간소화 */
     #notion-section li { 
       margin-bottom: 1em; 
       padding: 1.2em; 
       border: 1px solid var(--border-color); 
-      border-left: 5px solid var(--primary-color); /* 왼쪽에 포인트 색상 바 추가 */
+      border-left: 4px solid var(--primary-color); /* 왼쪽 바 두께 조정 */
       border-radius: 8px; 
-      background-color: #ffffff;
+      background-color: transparent; /* 내부 배경색 제거 */
     }
     
     #media-section article { margin-bottom: 2em; }
     #media-section figure { margin: 0; }
-    #media-section figcaption { margin-top: 0.5em; text-align: center; } /* 캡션 중앙 정렬 */
+    #media-section figcaption { margin-top: 0.5em; text-align: center; }
     #media-section h3 { font-size: 1.2em; margin: 0.5em 0; }
     #media-section p { font-size: 0.9em; color: var(--text-muted-color); margin: 0; text-align: center; }
     #media-section img { margin-bottom: 1em; }
 
     #current-time { text-align: center; margin-bottom: 2em; font-size: 1em; color: var(--text-muted-color); }
 
-    /* 로고 슬라이더 개선 */
+    /* 로고 슬라이더 */
     .slider { width: 100%; overflow: hidden; padding: 2em 0; margin-top: 1em; border-top: 1px solid var(--border-color); }
     .slider-track { display: flex; width: calc(250px * 10); animation: slide 40s linear infinite; }
-    .slide-item { 
-      width: 250px; 
-      padding: 0 40px; 
-      display: flex; 
-      flex-direction: column;
-      align-items: center; 
-      justify-content: center; 
-      position: relative;
-    }
-    .slide-item img { 
-      max-height: 50px; 
-      width: auto; 
-      filter: grayscale(100%); 
-      opacity: 0.6; /* 기본 투명도를 약간 낮춤 */
-      transition: all 0.3s ease;
-      margin: 0;
-    }
-    .slide-item:hover img { 
-      filter: grayscale(0%); 
-      opacity: 1; /* 마우스 올리면 선명하게 */
-      transform: scale(1.1); 
-    }
-    
-    /* 슬라이더 캡션 스타일 */
-    .slide-caption {
-      opacity: 0;
-      visibility: hidden;
-      position: absolute;
-      bottom: -35px; /* 이미지 아래에 위치 조정 */
-      font-size: 0.8em;
-      color: var(--text-muted-color);
-      background-color: var(--card-bg-color);
-      padding: 4px 10px;
-      border-radius: 4px;
-      white-space: nowrap;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 캡션에도 그림자 추가 */
-    }
-    .slide-item:hover .slide-caption {
-      opacity: 1;
-      visibility: visible;
-    }
-
+    .slide-item { width: 250px; padding: 0 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+    .slide-item img { max-height: 50px; width: auto; filter: grayscale(100%); opacity: 0.6; transition: all 0.3s ease; margin: 0; }
+    .slide-item:hover img { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
+    .slide-caption { opacity: 0; visibility: hidden; position: absolute; bottom: -35px; font-size: 0.8em; color: var(--text-muted-color); background-color: var(--card-bg-color); padding: 4px 10px; border-radius: 4px; white-space: nowrap; transition: opacity 0.3s ease, visibility 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .slide-item:hover .slide-caption { opacity: 1; visibility: visible; }
     @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     .slider-track:hover { animation-play-state: paused; }
 
     /* --- #content-area 내부 콘텐츠 스타일 --- */
-    #content-area {
-      text-align: left; /* 상속받은 가운데 정렬을 왼쪽 정렬로 변경 */
-    }
-    #content-area h2, #content-area h3 {
-      text-align: left; /* 제목들도 왼쪽 정렬을 명시 */
-    }
-    #content-area ul {
-      list-style: none; /* 브라우저 기본 불릿 포인트 제거 */
-      padding-left: 0;  /* 브라우저 기본 왼쪽 여백 제거 */
-    }
-    #content-area li {
-      margin-bottom: 0.8em; /* 목록 아이템 간 간격 조정 */
-      padding-left: 1.5em;  /* 커스텀 불릿이 들어갈 공간 확보 */
-      position: relative;
-    }
-    #content-area li::before {
-      content: '–'; /* 커스텀 불릿 기호 (대시) */
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--primary-color); /* 주 색상 적용 */
-      font-weight: 700;
-    }
+    #content-area { text-align: left; }
+    #content-area h2, #content-area h3 { text-align: left; }
+    #content-area ul { list-style: none; padding-left: 0; }
+    #content-area li { margin-bottom: 0.8em; padding-left: 1.5em; position: relative; }
+    #content-area li::before { content: '–'; position: absolute; left: 0; top: 0; color: var(--primary-color); font-weight: 700; }
 
     /* --- #content-area 내부 테이블 스타일 --- */
-    #content-area table {
-      width: 100%;
-      margin-top: 2em;
-      border-collapse: collapse;
-      border: 1px solid var(--border-color);
-      border-radius: 8px; /* 테이블 모서리를 둥글게 */
-      overflow: hidden;   /* radius 적용을 위해 overflow hidden */
-    }
-    #content-area th, #content-area td {
-      padding: 0.8em 1em;
-      border-bottom: 1px solid var(--border-color);
-    }
-    #content-area th {
-      background-color: var(--bg-color);
-      font-weight: 600;
-      text-align: center;
-    }
-    #content-area td {
-      vertical-align: top;
-    }
-    #content-area tbody tr:last-child th,
-    #content-area tbody tr:last-child td {
-        border-bottom: 0; /* 마지막 줄의 하단 테두리 제거 */
-    }
+    #content-area table { width: 100%; margin-top: 2em; border-collapse: collapse; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; }
+    #content-area th, #content-area td { padding: 0.8em 1em; border-bottom: 1px solid var(--border-color); }
+    #content-area th { background-color: var(--bg-color); font-weight: 600; text-align: center; }
+    #content-area td { vertical-align: top; }
+    #content-area tbody tr:last-child th, #content-area tbody tr:last-child td { border-bottom: 0; }
 
   </style>
 
