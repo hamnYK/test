@@ -59,6 +59,9 @@
       line-height: 1.8; /* 줄 간격 넓혀서 가독성 향상 */
       text-align: left;   /* 긴 글은 왼쪽 정렬이 읽기 편함 */
     }
+    header p {
+      text-align: center; /* 헤더의 p 태그만 가운데 정렬 (추가된 부분) */
+    }
     #notion-section ul { list-style: none; padding: 0; max-width: 100%; text-align: left; } /* 목록도 왼쪽 정렬 */
     address { font-style: normal; }
 
@@ -162,7 +165,7 @@
     @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     .slider-track:hover { animation-play-state: paused; }
 
-    /* --- #content-area 내부 콘텐츠 스타일 (추가된 부분) --- */
+    /* --- #content-area 내부 콘텐츠 스타일 --- */
     #content-area {
       text-align: left; /* 상속받은 가운데 정렬을 왼쪽 정렬로 변경 */
     }
