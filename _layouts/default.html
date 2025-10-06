@@ -8,26 +8,55 @@
     {{ content }}
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const contentArea = document.getElementById('content-area');
         const subMenu = document.getElementById('content-section');
         const subMenuLinks = subMenu ? subMenu.querySelectorAll('a') : [];
         
-        // Jekyll의 baseurl 값을 JavaScript 변수로 가져옴
         const siteBaseUrl = '{{ site.baseurl }}';
 
-        // [수정됨] marked.js의 walkTokens를 사용하여 이미지 경로를 안전하게 수정
         const walkTokens = (token) => {
           if (token.type === 'image' && !token.href.startsWith('http')) {
-            // 이미지 경로(href)가 절대경로('/')로 시작하면 baseurl을 앞에 붙여줌
             if (token.href.startsWith('/')) {
               token.href = siteBaseUrl + token.href;
             }
           }
         };
         marked.use({ walkTokens });
+
+        // Giscus 스크립트를 동적으로 로드하는 함수
+        function loadGiscus() {
+          const giscusContainer = document.getElementById('giscus-container');
+          if (!giscusContainer) return;
+
+          const existingScript = document.getElementById('giscus-script');
+          if (existingScript) {
+            existingScript.remove();
+          }
+          
+          const script = document.createElement('script');
+          script.id = 'giscus-script';
+          script.src = "https://giscus.app/client.js";
+          
+          /* 관리자 Giscus 정보 업데이트 */
+          script.setAttribute('data-repo', "hamnYK/WorfBS");
+          script.setAttribute('data-repo-id', "R_kgDOP1voKQ");
+          script.setAttribute('data-category', "Announcements");
+          script.setAttribute('data-category-id', "DIC_kwDOP1voKc4Cv0rD");
+
+          script.setAttribute('data-mapping', "pathname");
+          script.setAttribute('data-strict', "0");
+          script.setAttribute('data-reactions-enabled', "1");
+          script.setAttribute('data-emit-metadata', "0");
+          script.setAttribute('data-input-position', "bottom");
+          script.setAttribute('data-theme', "light");
+          script.setAttribute('data-lang', "ko");
+          script.setAttribute('crossorigin', "anonymous");
+          script.async = true;
+          
+          giscusContainer.appendChild(script);
+        }
 
         function updateActiveMenu(activeId) {
           subMenuLinks.forEach(link => {
@@ -37,7 +66,6 @@
 
         function loadContent(mdFile) {
           const menuId = 'menu-' + mdFile.replace('.md', '');
-          // fetch 경로에도 baseurl을 적용
           fetch(siteBaseUrl + "/" + mdFile)
             .then(response => {
               if (!response.ok) {
@@ -47,10 +75,10 @@
             })
             .then(markdownText => {
               if (contentArea) {
-                // Jekyll front matter(---로 둘러싸인 부분)를 제거
                 const contentOnly = markdownText.replace(/---[\s\S]*?---/, '').trim();
                 contentArea.innerHTML = marked.parse(contentOnly);
                 updateActiveMenu(menuId);
+                loadGiscus(); 
               }
             })
             .catch(error => {
@@ -73,7 +101,6 @@
             });
         }
         
-        // 페이지 첫 로드 시 기본 콘텐츠를 로딩합니다.
         if (contentArea) {
             loadContent('servicesolution.md');
         }
