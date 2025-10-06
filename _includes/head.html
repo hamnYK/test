@@ -146,7 +146,19 @@
     #content-area h2, #content-area h3 { text-align: left; }
     #content-area ul { list-style: none; padding-left: 0; }
     #content-area li { margin-bottom: 0.8em; padding-left: 1.5em; position: relative; }
-    #content-area li::before { content: '–'; position: absolute; left: 0; top: 0; color: var(--primary-color); font-weight: 700; }
+
+    /* 불릿 포인트 스타일 (수정된 부분) */
+    #content-area li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border: 1.5px solid var(--primary-color);
+      border-radius: 50%;
+    }
 
     /* --- #content-area 내부 테이블 스타일 --- */
     #content-area table { width: 100%; margin-top: 2em; border-collapse: collapse; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; }
