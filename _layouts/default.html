@@ -2,9 +2,13 @@
 <html lang="ko">
   {%- include head.html -%}
   <body>
+
+    <div class="gtranslate_wrapper"></div>
+
     {{ content }}
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const contentArea = document.getElementById('content-area');
