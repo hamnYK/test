@@ -139,7 +139,7 @@
     #content-area tbody tr:last-child th,
     #content-area tbody tr:last-child td { border-bottom: 0; }
 
-    /* --- 반응형 디자인을 위한 미디어 쿼리 (추가된 부분) --- */
+    /* --- 반응형 디자인을 위한 미디어 쿼리 --- */
     @media (max-width: 768px) {
       body {
         padding: 1.5em; /* 모바일에서는 전체 여백 축소 */
@@ -149,6 +149,17 @@
       }
       h1 { font-size: 2em; } /* 제목 폰트 크기 조정 */
       h2 { font-size: 1.5em; }
+
+      /* 모바일 메뉴 스타일 (언어 변경 시 줄바꿈 방지) (수정된 부분) */
+      #content-section {
+        display: flex;
+        flex-direction: column; /* 메뉴 항목을 세로로 쌓음 */
+        align-items: stretch; /* 메뉴 항목의 너비를 100%로 확장 */
+      }
+      #content-section a {
+        margin: 0 0 0.5em 0; /* 위아래 마진으로 간격 조정 */
+        text-align: center; /* 텍스트 가운데 정렬 */
+      }
 
       /* 모바일용 테이블 스타일 */
       #content-area table, 
