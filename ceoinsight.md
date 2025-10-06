@@ -22,6 +22,9 @@ RiskMgt.Workflow = {<br>
     }<br>
 };
 
+> **CEO 성장 서사(스토리텔링) 그래픽**<br>
+![CEO 프로필](/assets/articles/CI_footprint.png)
+
 ---
 
 <script src="https://giscus.app/client.js"
@@ -39,8 +42,3 @@ RiskMgt.Workflow = {<br>
         crossorigin="anonymous"
         async>
 </script>
-
----
-
-> **CEO 성장 서사(스토리텔링) 그래픽**<br>
-![CEO 프로필](/assets/articles/CI_footprint.png)
